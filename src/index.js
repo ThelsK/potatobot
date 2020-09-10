@@ -1,5 +1,6 @@
 const { checkEnvironments } = require("./environment")
 const { authServiceWorker, loadGoogleSheet } = require("./googleSheet")
+const { loginDiscordClient } = require("./discordBot")
 const { reportError } = require("./error")
 
 async function initialize() {
@@ -17,6 +18,12 @@ async function initialize() {
 
 	// Load the Google Sheets document.
 	success = await loadGoogleSheet(reportError)
+	if (!success) {
+		process.exit()
+	}
+
+	// Initialize the Discord client.
+	success = await loginDiscordClient(reportError)
 	if (!success) {
 		process.exit()
 	}

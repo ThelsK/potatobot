@@ -11,6 +11,7 @@
   "author": "Thels de Kwant",
   "license": "ISC",
   "dependencies": {
+    "discord.js": "^12.3.1",
     "google-spreadsheet": "^3.0.13"
   }
 }
