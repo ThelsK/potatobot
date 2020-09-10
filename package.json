@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Thels de Kwant",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13"
+  }
 }
